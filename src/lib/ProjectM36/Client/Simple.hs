@@ -15,7 +15,7 @@ module ProjectM36.Client.Simple (
   close,
   Atom(..),
   AtomType(..),
-  Db,
+  Db(..),
   DbConn,
   DbError(..),
   RelationalError(..),
@@ -29,12 +29,12 @@ module ProjectM36.Client.Simple (
   C.RelationalExprBase(..)
   ) where
 
-import Control.Exception.Base
-import Control.Monad ((<=<))
-import Control.Monad.Reader
-import ProjectM36.Base
-import qualified ProjectM36.Client as C
-import ProjectM36.Error
+import           Control.Exception.Base
+import           Control.Monad          ((<=<))
+import           Control.Monad.Reader
+import           ProjectM36.Base
+import qualified ProjectM36.Client      as C
+import           ProjectM36.Error
 
 type DbConn = (C.SessionId, C.Connection)
 
